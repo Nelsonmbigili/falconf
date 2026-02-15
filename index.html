@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falcon Futsal - NYU Abu Dhabi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/ball.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo"> 
+      <img id="nav-ball" src="assets/ball.svg" alt="Home">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="#video">Video</a>
+      <a href="#teams">Teams</a>
+      <a href="#fixtures">Fixtures</a>
+      <a href="#game">Game</a> 
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section reveal-section home-with-bg">
+    <div class="home-overlay"></div>
+    <div class="content-wrapper">
+      <div class="section-text fade-in-up">
+        <h1 class="hero-title">Falcon Futsal</h1>
+        <h3 class="hero-subtitle">NYU Abu Dhabi</h3>
+        <p class="hero-description">Fixtures, team info, and competition beyond the court.</p>
+        <a href="#video" class="cta-button">Watch Video</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION (FULL SCREEN) -->
+  <section id="video" class="video-section">
+    <div class="video-content-wrapper">
+      <div class="video-container">
+        <video class="hero-video" src="https://res.cloudinary.com/dk59ei1bg/video/upload/v1770791394/video_u6olmu.mp4" controls autoplay muted loop playsinline></video>
+      </div>
+    </div>
+  </section>
+
+<!-- TEAMS SECTION -->
+<section id="teams" class="section reveal-section">
+  <div class="content-wrapper">
+    <h2 class="centered-title slide-in-down">Meet the Teams</h2>
+    <p class="section-subtitle fade-in">Click on any team to view their stats</p>
+    
+    <div class="teams-wrapper">
+      <button class="scroll-arrow scroll-arrow-left" id="scroll-left" aria-label="Scroll left">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      
+      <div class="teams-scroll" id="teams-scroll">
+        <div class="teams-track" id="teams-container">
+          <!-- Teams will be dynamically loaded here -->
+        </div>
+      </div>
+      
+      <button class="scroll-arrow scroll-arrow-right" id="scroll-right" aria-label="Scroll right">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- FIXTURES SECTION -->
+<section id="fixtures" class="section reveal-section">
+  <div class="content-wrapper">
+    <h2 class="centered-title slide-in-down">Season Fixtures</h2>
+    <p class="section-subtitle fade-in">Stay updated with all upcoming matches</p>
+    <div id="fixtures-body">
+     
+    </div>
+  </div>
+</section>
+
+  <!-- GAME SECTION -->
+   <section id="game" class="section">
+        <div class="content-wrapper game-container">
+            <h2 class="centered-title">Game</h2>
+            <p class="section-subtitle">Walk around the court to discover the Futsal Game</p>
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas"></canvas>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section reveal-section contact-section">
+      <div class="contact-card fade-in-up">
+        
+        <div class="contact-info">
+          
+          <div class="instruction-box">
+            <h3>Want to Participate?</h3>
+            <p>If you are registering a full team, please include your <strong>Team Name</strong> and <strong>Player Count</strong> in your message.</p>
+            <p>Individual players looking for a team are also welcome—just let us know your preferred position!</p>
+          </div>
+          
+         <div class="social-links">
+              <a href="#" class="social-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <div class="social-text">
+                  <span>Instagram</span>
+                  <small>@ProFutsal2026</small>
+                </div>
+              </a>
+
+              <a href="#" class="social-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+                <div class="social-text">
+                  <span>Twitter / X</span>
+                  <small>@FutsalTactics</small>
+                </div>
+              </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form class="styled-form" action="https://formspree.io/f/xvzbanpo" method="POST">
+              <input type="text" name="name" placeholder="Full Name" required>
+              <input type="email" name="email" placeholder="Email Address" required>
+              <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+              <button type="submit">
+                <span>Send Message</span>
+              </button>
+            </form>
+        </div>
+
+      </div>
+    </section>
+
+</main>
+
+<!-- TEAM MODAL -->
+<dialog id="team-modal">
+  <div class="modal-content">
+    <button class="close-team-btn" onclick="document.getElementById('team-modal').close()">&times;</button>
+    <div class="modal-header-image">
+      <img id="modal-team-img" src="" alt="Team Logo">
+    </div>
+    <div class="modal-info">
+      <h2 id="modal-team-name"></h2>
+      <span id="modal-team-div" class="badge"></span>
+      <hr>
+      <p id="modal-team-desc"></p>
+      <div class="stats-row">
+          <div class="stat-box">
+            <strong id="modal-stats-wins">-</strong>
+            <small>Wins</small>
+          </div>
+          <div class="stat-box">
+            <strong id="modal-stats-losses">-</strong>
+            <small>Losses</small>
+          </div>
+          <div class="stat-box">
+            <strong id="modal-stats-goals">-</strong>
+            <small>Goals</small>
+          </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 FALCON FUTSAL | NYU ABU DHABI | Nelson Mbigili</p>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="back-to-top" title="Back to top">↑</button>
+
+<!-- SCRIPTS -->
+<script src="assets/teams.js"></script>
+<script src="assets/fixtures.js"></script>
+<script src="game.js"></script> 
+<script src="script.js"></script>
+</body>
+</html>
